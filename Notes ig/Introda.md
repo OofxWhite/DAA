@@ -1,4 +1,10 @@
 # Basics
+**Table of Contents:**
+- [Basics](#basics)
+    - [The Big O notation](#the-big-o-notation)
+      - [Common Notations](#common-notations)
+      - [Writing Big O notations](#writing-big-o-notations)
+----
 1. **Time Complexity:** Understanding how the runtime of an algorithm scales with increasing input size. This involves expressing the upper bound on the time required by an algorithm.   
 2. **Space Complexity:** Evaluvates how much space in memory an algorithm requires to execute a function of input size.
 > 💡
