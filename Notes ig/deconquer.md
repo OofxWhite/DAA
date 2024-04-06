@@ -52,3 +52,59 @@
             return 0;
         }
      ```
+---
+2. #### Decrease by a constant factor
+    - Technique suggests reducing a problem instance by the same constant factor on each iteration of the algorithm.
+    - Usually the factor is reduced by 2.
+    - Time complexity of these algorithms are usually O(log n). n being the size of the input. 
+    - **Example:** Binary Search
+        ```c
+        #include <stdio.h>
+
+        // An iterative binary search function.
+        int binarySearch(int arr[], int l, int r, int x)
+        {
+            while (l <= r) {
+                int m = l + (r - l) / 2;
+
+                // Check if x is present at mid
+                if (arr[m] == x)
+                    return m;
+
+                // If x greater, ignore left half
+                if (arr[m] < x)
+                    l = m + 1;
+
+                // If x is smaller, ignore right half
+                else
+                    r = m - 1;
+            }
+
+            // If we reach here, then element was not present
+            return -1;
+        }
+
+        // Driver code
+        int main(void)
+        {
+            int arr[] = { 2, 3, 4, 10, 40 };
+            int n = sizeof(arr) / sizeof(arr[0]);
+            int x = 10;
+            int result = binarySearch(arr, 0, n - 1, x);
+            (result == -1) ? printf("Element is not present"
+                                    " in array")
+                        : printf("Element is present at "
+                                    "index %d",
+                                    result);
+            return 0;
+        }
+        ```
+      -  Code above halves the sorted array into two halves pivoting in the middle and recursively divides and traverses based on the value of the pivot.
+---
+#### Pros
+- Simplicity: Decrease-and-conquer is often simpler to implement compared to other techniques like dynamic programming or divide-and-conquer.
+- Efficient Algorithms: The technique often leads to efficient algorithms as the size of the input data is reduced at each step, reducing the time and space complexity of the solution.
+#### Cons
+- Problem-Specific: The technique is not applicable to all problems and may not be suitable for more complex problems.
+- Implementation Complexity: The technique can be more complex to implement when compared to other techniques like divide-and-conquer, and may require more careful planning.
+---
