@@ -14,8 +14,7 @@
 ---
 #### Applications
 1. **Strassens Multiplication:** Strassen’s algorithm for matrix multiplication is a divide and conquer technique that reduces the number of multiplications required for large matrices by breaking down the matrices into smaller submatrices and combining their products.
-<details>
-<summary> Example code </summary>
+- Example code
 ```c
 
     #include <stdio.h>
@@ -108,15 +107,12 @@
             strassen(temp1, B11, M2, newSize); // M2 = (A21 + A22) * (B11)
 
 
-    ```
-    </details>
-
-2. **Merge Sort:** It breaks down the array into smaller subarrays, sorts them individually, and then merges them to obtain the sorted array.
+```
+1. **Merge Sort:** It breaks down the array into smaller subarrays, sorts them individually, and then merges them to obtain the sorted array.
     - Algorithm that continuously splits the array in half until it cannot be further divided. 
-      - Then the sorted subarrays are merged into one sorted array.
+    - Then the sorted subarrays are merged into one sorted array.
     - Time complexity: O(n logn).
-    <details>
-    <summary> Example code </summary>
+
 ```c
 
        #include <stdio.h>
@@ -196,7 +192,6 @@
             return 0;
         }
 ```
-</details>
 
 ##### Pros
 - **Stability:** Merge sort is a stable sorting algorithm, which means it maintains the relative order of equal elements in the input array.
